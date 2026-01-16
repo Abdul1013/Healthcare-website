@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-health-green: #00BFA5;
+  --color-health-pink: #FF69B4;
+  --color-health-orange: #FFA500;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid #00BFA5;
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
