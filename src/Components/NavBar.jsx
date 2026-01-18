@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -15,10 +16,27 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close menu when clicking outside navbar
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav className="w-full bg-health-orange text-white shadow-lg">
+    <nav ref={navRef} className="w-full bg-health-orange text-white shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-1">
-        <img src="/logo.png" alt="Health Care Logo" className="h-6 w-auto cursor-pointer" onClick={() => scrollToSection('hero')} />
+        <img src="/logo.png" alt="Health Care Logo" className="h-[12px] w-auto cursor-pointer" onClick={() => scrollToSection('hero')} />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">

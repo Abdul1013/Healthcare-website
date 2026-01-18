@@ -7,7 +7,7 @@ const AboutUs = () => {
         {/* Text and Image Row */}
         <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
           <div className="flex-1 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-3xl text-center md:text-left md:text-4xl font-bold text-gray-800 mb-6">
               About Us
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
