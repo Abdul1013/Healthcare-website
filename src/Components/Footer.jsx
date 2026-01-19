@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
 
           {/* Brand Info */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-1 flex flex-col items-center md:items-start">
             <img src="/logo.png" alt="Health Care Logo" className="h-8 w-auto mb-4" />
           </div>
 
