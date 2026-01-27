@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NewsLetter from './UI/NewsLetter.jsx';
 import CareersModal from './UI/CareersModal.jsx';
 import BlogsModal from './UI/BlogsModal.jsx';
+// import FAQSection from './FAQSection.jsx';
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
@@ -67,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               <li className="hover:text-health-pink cursor-pointer transition">Help Center</li>
               <li className="hover:text-health-pink cursor-pointer transition" onClick={() => setShowBlogsModal(true)}>Blog</li>
-              <li className="hover:text-health-pink cursor-pointer transition">FAQs</li>
+              <li className="hover:text-health-pink cursor-pointer transition" onClick={() => scrollToSection('faqs')}>FAQs</li>
               <li className="hover:text-health-pink cursor-pointer transition">Guides</li>
               <li className="hover:text-health-pink cursor-pointer transition">Community</li>
             </ul>
@@ -79,7 +80,7 @@ const Footer = () => {
            <ul className="space-y-2 text-sm text-gray-300">
              <li className="hover:text-health-pink cursor-pointer transition"><a href="tel:+17083519445">+1(708)3519445</a></li>
              <li className="hover:text-health-pink cursor-pointer transition"><a href="mailto:simplifycareinc@gmail.com">simplifycareinc@gmail.com</a></li>
-             <li className="hover:text-health-pink cursor-pointer transition"></li>
+             <li className="hover:text-health-pink cursor-pointer transition">133 Blackhawk drive park forest IL 60466</li>
            </ul>
          </div> 
         </div>

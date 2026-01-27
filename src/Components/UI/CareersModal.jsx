@@ -22,10 +22,10 @@ const CareersModal = ({ isOpen, onClose }) => {
             <label className="block text-sm font-medium mb-1">Email</label>
             <input type="email" className="w-full border rounded px-3 py-2" required />
           </div>
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium mb-1">Resume (URL)</label>
             <input type="url" className="w-full border rounded px-3 py-2" required />
-          </div>
+          </div> */}
           <div>
             <label className="block text-sm font-medium mb-1">Message</label>
             <textarea className="w-full border rounded px-3 py-2" rows="3" required></textarea>
