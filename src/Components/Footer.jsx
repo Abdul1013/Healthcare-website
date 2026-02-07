@@ -79,7 +79,7 @@ const Footer = () => {
            <h4 className="font-semibold text-health-pink mb-4 uppercase tracking-wider text-xs">Contact Us</h4>
            <ul className="space-y-2 text-sm text-gray-300">
              <li className="hover:text-health-pink cursor-pointer transition"><a href="tel:+17083519445">+1(708)3519445</a></li>
-             <li className="hover:text-health-pink cursor-pointer transition"><a href="mailto:simplifycareinc@gmail.com">simplifycareinc@gmail.com</a></li>
+             <li className="hover:text-health-pink cursor-pointer transition"><a href="mailto:simplifycareinc@gmail.com">Info@simplifycareinc.com</a></li>
              <li className="hover:text-health-pink cursor-pointer transition">133 Blackhawk drive park forest IL 60466</li>
            </ul>
          </div> 
