@@ -43,7 +43,7 @@ const Navbar = () => {
           <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('hero')}>Home</li>
           <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('about')}>About</li>
           <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('services')}>Services</li>
-          <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('testimonials')}>Testimonials</li>
+          {/* <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('testimonials')}>Testimonials</li> */}
           <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('contact')}>Get Started</li>
         </ul>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
               <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('hero')}>Home</li>
               <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('about')}>About</li>
               <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('services')}>Services</li>
-              <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('testimonials')}>Testimonials</li>
+              {/* <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('testimonials')}>Testimonials</li> */}
               <li className="cursor-pointer hover:text-health-pink transition-colors" onClick={() => scrollToSection('contact')}>Get Started</li>
             </ul>
 
