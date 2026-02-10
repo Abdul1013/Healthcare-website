@@ -1,0 +1,32 @@
+# Healthcare Website - SimplifyCare Inc
+# Generated for SEO optimization
+
+# Allow all bots
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /temp
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://simplifycare.com/sitemap.xml
+
+# Allow index of specific directories
+Allow: /assets/
+Allow: /public/
+
+# Respect crawl delays
+Request-rate: 30/1m
