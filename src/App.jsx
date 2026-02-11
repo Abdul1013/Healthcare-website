@@ -7,8 +7,10 @@ import AboutUs from './Components/AboutUs.jsx'
 import Services from './Components/Services.jsx'
 import Title from './Components/Title.jsx'
 import Section from './Components/Section.jsx'
-import TestimonialSection from './Components/TestimonialSection.jsx'
+// import TestimonialSection from './Components/TestimonialSection.jsx'
 import Footer from './Components/Footer.jsx'
+import FAQSection from './Components/FAQSection.jsx'
+import ContactUs from './Components/ContactUs.jsx'
 
 function App() {
 
@@ -21,7 +23,9 @@ function App() {
       <AboutUs/>
       <Services/>
       <Section/>
-      <TestimonialSection/>
+      <ContactUs/>
+      {/* <TestimonialSection/> */}
+      <FAQSection/>
       <Footer/>
       </>
   )

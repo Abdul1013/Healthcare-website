@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="bg-health-green py-12 px-6 flex flex-col items-center text-center">
+    <div id="newsletter" className="bg-health-pink py-12 px-6 flex flex-col items-center text-center">
       <h2 className="text-white text-2xl md:text-3xl font-bold mb-2">
         Stay Informed. Stay Healthy.
       </h2>
