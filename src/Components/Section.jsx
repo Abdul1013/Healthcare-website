@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section = () => {
   return (
-    <section className="w-full bg-health-pink py-16">
+    <section className="w-full bg-health-green py-16">
       <div className="max-w-7xl mx-auto px-8 text-center">
         <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 animate-fade-in">
           Why Choose Our Home Care
@@ -19,7 +19,7 @@ const Section = () => {
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-105 animate-slide-up">
-            <div className="w-16 h-16 bg-health-orange rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-health-green rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
               2
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Convenient Scheduling</h3>

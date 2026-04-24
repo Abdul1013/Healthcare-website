@@ -3,7 +3,7 @@ import React from 'react'
 const FeatureItem = ({ icon, title }) => {
   return (
     <div className="flex flex-col items-center text-center gap-4 animate-slide-up">
-      <div className="w-24 h-24 rounded-full bg-health-green border-4 border-health-orange flex items-center justify-center text-white text-3xl transform hover:scale-110 transition-transform">
+      <div className="w-24 h-24 rounded-full bg-health-green border-4 border-black/30 flex items-center justify-center text-white text-3xl transform hover:scale-110 transition-transform">
         {icon}
       </div>
       <p className="text-sm font-medium text-gray-700 max-w-37.5">
@@ -34,8 +34,8 @@ const Features = () => {
         />
 
         <FeatureItem
-          icon="⚡"
-          title="Quick satisfaction rate"
+          icon="⏱️"
+          title="24/7 onsite supervision"
         />
 
       </div>
