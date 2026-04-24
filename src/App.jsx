@@ -18,8 +18,8 @@ function App() {
     <>
       <NavBar />
       <Hero/>
-      <Features/>
       {/* <Title firrstline="Our Services"/> */}
+      <Features/>
       <AboutUs/>
       <Services/>
       <Section/>
