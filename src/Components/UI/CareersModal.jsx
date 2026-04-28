@@ -22,6 +22,24 @@ const CareersModal = ({ isOpen, onClose }) => {
             <label className="block text-sm font-medium mb-1">Email</label>
             <input type="email" className="w-full border rounded px-3 py-2" required />
           </div>
+          <div>
+            <label htmlFor="position" className="block text-sm font-medium mb-1">Position</label>
+            <select
+              id="position"
+              name="position"
+              defaultValue=""
+              required
+              className="w-full border rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-health-green focus:border-health-green"
+            >
+              <option value="" disabled>Select a position…</option>
+              <option value="cna">CNA — Certified Nursing Assistant</option>
+              <option value="dsp">DSP — Direct Support Professional</option>
+              <option value="nurse">Nurse (RN / LPN)</option>
+              <option value="qidp">QIDP — Qualified Intellectual Disabilities Professional</option>
+              <option value="janitor">Janitor</option>
+              <option value="receptionist">Receptionist</option>
+            </select>
+          </div>
           {/* <div>
             <label className="block text-sm font-medium mb-1">Resume (URL)</label>
             <input type="url" className="w-full border rounded px-3 py-2" required />
