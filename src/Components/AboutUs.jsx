@@ -20,7 +20,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row gap-16 items-start mb-12">
           <div className="w-full md:w-1/2 space-y-8">
             <p className="text-2xl md:text-3xl text-slate-800 leading-tight font-medium">
-              SimplifyCare, Inc. provides residential and home care services for
+              SimplifyCare Inc provides residential and home care services for
               adults with intellectual and developmental disabilities.
             </p>
             <div className="h-[1px] w-20 bg-health-green" />
@@ -49,9 +49,7 @@ const AboutUs = () => {
                 Our Mission
               </h3>
               <p className="text-slate-600 font-light leading-relaxed">
-                To deliver accessible, high-quality healthcare services right to
-                your doorstep, fostering a healthier, more independent
-                community.
+                At SimplifyCare Inc, we are driven by a simple mission: <b>to make care easier, more accessible and more human </b>. We partner with families, providers and community organizations to ensure every individual receives the respect, support and opportunities they deserve.   Together, we are building a future where people of all abilities can live, grow and belong.
               </p>
             </div>
             <div className="md:border-x-2 border-health-green md:px-2 ">

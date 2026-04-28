@@ -30,7 +30,7 @@ const Features = () => {
 
         <FeatureItem
           icon="⭐"
-          title="100% satisfaction rate"
+          title= "High satisfaction rate"
         />
 
         <FeatureItem

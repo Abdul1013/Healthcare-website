@@ -1,15 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate, currentPage = "home" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const go = (target, sectionId) => {
+    if (typeof onNavigate === "function") {
+      onNavigate(target, sectionId);
+    } else if (sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false); // Close menu after clicking
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -33,23 +35,48 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  const linkBase =
+    "cursor-pointer transition-colors";
+  const linkActive = "text-health-green";
+  const linkIdle = "hover:text-health-green";
+
   return (
-    <nav ref={navRef} className="w-full bg-black/70 text-white shadow-lg border-b border-white fixed top-0 left-0 z-50 backdrop-blur-sm">
+    <nav ref={navRef} className="w-full bg-black text-white shadow-lg border-b border-white fixed top-0 left-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-1">
         <img
           src="/logo.png"
           alt="Health Care Logo"
           className="h-25 w-35 cursor-pointer"
-          onClick={() => scrollToSection("hero")}
+          onClick={() => go("home", "hero")}
         />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <li className="cursor-pointer hover:text-health-green transition-colors" onClick={() => scrollToSection('hero')}>Home</li>
-          <li className="cursor-pointer hover:text-health-green transition-colors" onClick={() => scrollToSection('about')}>About</li>
-          <li className="cursor-pointer hover:text-health-green transition-colors" onClick={() => scrollToSection('services')}>Services</li>
-          {/* <li className="cursor-pointer hover:text-health-green transition-colors" onClick={() => scrollToSection('testimonials')}>Testimonials</li> */}
-          <li className="cursor-pointer hover:text-health-green transition-colors" onClick={() => scrollToSection('contact')}>Get Started</li>
+          <li
+            className={`${linkBase} ${currentPage === "home" ? linkActive : linkIdle}`}
+            onClick={() => go("home", "hero")}
+          >
+            Home
+          </li>
+          <li
+            className={`${linkBase} ${linkIdle}`}
+            onClick={() => go("home", "about")}
+          >
+            About
+          </li>
+          <li
+            className={`${linkBase} ${currentPage === "services" ? linkActive : linkIdle}`}
+            onClick={() => go("services")}
+          >
+            Services
+          </li>
+          {/* <li className={`${linkBase} ${linkIdle}`} onClick={() => go('home', 'testimonials')}>Testimonials</li> */}
+          <li
+            className={`${linkBase} ${linkIdle}`}
+            onClick={() => go("home", "contact-us")}
+          >
+            Get Started
+          </li>
         </ul>
 
         {/* Social Links - Desktop */}
@@ -87,7 +114,7 @@ const Navbar = () => {
 
         {/* Hamburger Menu Button */}
         <button
-          className="md:hidden text-black focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -122,32 +149,26 @@ const Navbar = () => {
           <div className="px-8 py-4 space-y-4">
             <ul className="space-y-4">
               <li
-                className="cursor-pointer hover:text-health-green transition-colors"
-                onClick={() => scrollToSection("hero")}
+                className={`${linkBase} ${currentPage === "home" ? linkActive : linkIdle}`}
+                onClick={() => go("home", "hero")}
               >
                 Home
               </li>
               <li
-                className="cursor-pointer hover:text-health-green transition-colors"
-                onClick={() => scrollToSection("about")}
+                className={`${linkBase} ${linkIdle}`}
+                onClick={() => go("home", "about")}
               >
                 About
               </li>
               <li
-                className="cursor-pointer hover:text-health-green transition-colors"
-                onClick={() => scrollToSection("services")}
+                className={`${linkBase} ${currentPage === "services" ? linkActive : linkIdle}`}
+                onClick={() => go("services")}
               >
                 Services
               </li>
               <li
-                className="cursor-pointer hover:text-health-green transition-colors"
-                onClick={() => scrollToSection("testimonials")}
-              >
-                Testimonials
-              </li>
-              <li
-                className="cursor-pointer hover:text-health-green transition-colors"
-                onClick={() => scrollToSection("contact")}
+                className={`${linkBase} ${linkIdle}`}
+                onClick={() => go("home", "contact-us")}
               >
                 Get Started
               </li>
