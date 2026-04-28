@@ -35,10 +35,11 @@ const StepItem = ({ step, title, description, onClick }) => {
   );
 };
 
-const scrollToContact = () =>
+const defaultScrollToContact = () =>
   document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' });
 
-const Services = () => {
+const Services = ({ onGetStarted }) => {
+  const handleStart = onGetStarted || defaultScrollToContact;
   return (
     <section id="services" className="w-full py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 mb-32">
@@ -90,7 +91,7 @@ const Services = () => {
                 step="1"
                 title="Choose a Service"
                 description="Select the service that suits your needs and schedule your appointment easily online"
-                onClick={scrollToContact}
+                onClick={handleStart}
               />
               <StepItem
                 step="2"
