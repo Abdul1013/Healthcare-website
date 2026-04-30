@@ -1,4 +1,5 @@
 import { Home, Building2, ArrowRight } from 'lucide-react';
+import Reveal from './Reveal';
 
 const ServiceItem = ({ icon, title, description }) => {
   const Icon = icon;
@@ -41,7 +42,7 @@ const defaultScrollToContact = () =>
 const Services = ({ onGetStarted }) => {
   const handleStart = onGetStarted || defaultScrollToContact;
   return (
-    <section id="services" className="w-full py-24 bg-white">
+    <section id="services" className="w-full py-24 bg-slate-100">
       <div className="max-w-7xl mx-auto px-6 mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-16">
           <div className="lg:col-span-6">
@@ -70,6 +71,44 @@ const Services = ({ onGetStarted }) => {
             title="CILA Services"
             description="Our Community Integrated Living Arrangements offer 24/7 onsite supervision and person-centered residential support for total community integration."
           />
+        </div>
+      </div>
+
+      {/* IMAGE GALLERY */}
+      <div className="max-w-7xl mx-auto px-6 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Reveal variant="zoom" delay={0}>
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80&auto=format&fit=crop"
+              alt="Healthcare professional with stethoscope"
+              loading="lazy"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-500"
+            />
+          </Reveal>
+          <Reveal variant="zoom" delay={120} className="mt-0 md:mt-8">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&auto=format&fit=crop"
+              alt="Nurse caring for patient"
+              loading="lazy"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-500"
+            />
+          </Reveal>
+          <Reveal variant="zoom" delay={240}>
+            <img
+              src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=600&q=80&auto=format&fit=crop"
+              alt="Caregiver holding patient's hand"
+              loading="lazy"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-500"
+            />
+          </Reveal>
+          <Reveal variant="zoom" delay={360} className="mt-0 md:mt-8">
+            <img
+              src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&q=80&auto=format&fit=crop"
+              alt="Home healthcare visit"
+              loading="lazy"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-500"
+            />
+          </Reveal>
         </div>
       </div>
 

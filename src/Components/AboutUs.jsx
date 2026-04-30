@@ -20,16 +20,14 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row gap-16 items-start mb-12">
           <div className="w-full md:w-1/2 space-y-8">
             <p className="text-2xl md:text-3xl text-slate-800 leading-tight font-medium">
-              SimplifyCare Inc provides residential and home care services for
-              adults with intellectual and developmental disabilities.
+              SimplifyCare Inc. provides compassionate, high-quality home care
+              services for seniors and individuals who need support with daily
+              living. We also offer Community Integrated Living Arrangements
+              (CILA), delivering safe, structured, and supportive residential
+              care for adults with intellectual and developmental disabilities.
             </p>
-            <div className="h-[1px] w-20 bg-health-green" />
-            <p className="text-lg text-slate-600 leading-relaxed font-light">
-              Based in Matteson, Illinois, we deliver 24/7 onsite supervision,
-              daily-living skills coaching, and care coordination designed to
-              promote independence and community participation. Our team brings
-              clinical professionalism and human compassion to every doorstep.
-            </p>
+
+            <div className="h-px w-20 bg-health-green" />
           </div>
           {/*Image*/}
           <div className="w-full md:w-1/2 animate-slide-up">
@@ -41,18 +39,54 @@ const AboutUs = () => {
           </div>
         </div>
 
+         <div className="flex flex-col md:flex-row gap-16 items-start mb-12">
+           {/*Image*/}
+          <div className="w-full md:w-1/2 animate-slide-up">
+            <img
+              src="/about2.jpg"
+              alt="About Health Care"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div className="w-full md:w-1/2 space-y-8">
+
+            <div className="h-px w-20 bg-health-green" />
+
+            <p className="text-lg text-slate-600 leading-relaxed font-light">
+              At SimplifyCare Inc., we believe every person deserves care that
+              honors their story, respects their choices, and strengthens their
+              independence. Based in Illinois, we provide personalized home and
+              daily living support designed to help individuals thrive both at
+              home and within their communities. Compassion, dignity, and trust
+              guide everything we do.
+              <br />
+              <br />
+              We proudly serve Cook, DuPage, and Will counties, and we are fully
+              licensed and compliant with all state regulations—ensuring the
+              highest standard of care for our clients and their families.
+            </p>
+          </div>
+         
+        </div>
+
         {/* MISSION*/}
         <div className="border-t border-slate-100 pt-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h3 className=" text-center text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">
                 Our Mission
               </h3>
               <p className="text-slate-600 font-light leading-relaxed">
-                At SimplifyCare Inc, we are driven by a simple mission: <b>to make care easier, more accessible and more human </b>. We partner with families, providers and community organizations to ensure every individual receives the respect, support and opportunities they deserve.   Together, we are building a future where people of all abilities can live, grow and belong.
+                At SimplifyCare Inc. we are driven by a simple mission:{" "}
+                <b>to make care easier, more accessible and more human. </b> We
+                partner with families, providers and community organizations to
+                ensure every individual receives the respect, support and
+                opportunities they deserve. Together, we are building a future
+                where people of all abilities can live, grow and belong.
               </p>
             </div>
-            <div className="md:border-x-2 border-health-green md:px-2 ">
+            <div className="md:border-l-2 border-health-green md:px-2 ">
               <h3 className=" text-center text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">
                 Our Vision
               </h3>
@@ -60,25 +94,6 @@ const AboutUs = () => {
                 Empowering adults with disabilities through skill-coaching and
                 medication management to achieve full community participation.
               </p>
-            </div>
-            <div>
-              <h3 className=" text-center text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">
-                The Protocol
-              </h3>
-              <ul className="text-slate-600 font-light space-y-3 text-sm">
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />{" "}
-                  Medication Management
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />{" "}
-                  Daily Living Skills
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />{" "}
-                  Care Coordination
-                </li>
-              </ul>
             </div>
           </div>
         </div>

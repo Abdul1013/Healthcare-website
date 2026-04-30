@@ -1,47 +1,64 @@
-import React from 'react'
+import React from 'react';
+import { ShieldCheck, Award, Star, Activity, Check } from 'lucide-react';
 
-const FeatureItem = ({ icon, title }) => {
+const FeatureItem = ({ icon: Icon, title, description }) => {
   return (
-    <div className="flex flex-col items-center text-center gap-4 animate-slide-up">
-      <div className="w-24 h-24 rounded-full bg-health-green border-4 border-black/30 flex items-center justify-center text-white text-3xl transform hover:scale-110 transition-transform">
-        {icon}
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 group">
+      <div className="shrink-0 rounded-b-full w-12 h-12 flex items-center justify-center text-health-green bg-health-green/10 rounded-none group-hover:bg-health-green group-hover:text-white transition-all duration-500">
+        <Icon size={24} strokeWidth={1.5} />
       </div>
-      <p className="text-sm font-medium text-gray-700 max-w-37.5">
-        {title}
-      </p>
+      <div className="text-center md:text-left">
+        <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-900 mb-1">
+          {title}
+        </h4>
+        <p className="text-xs text-slate-500 font-light leading-relaxed max-w-[160px]">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
 
 const Features = () => {
   return (
-    <section className="w-full bg-white py-14">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-16">
+    <section className="w-full bg-slate-50 py-20 border-y border-slate-100">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Optional Header to set the tone */}
+        <div className="flex items-center gap-4 mb-16">
+            <div className="w-12 h-[1px] bg-he" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-slate-400">
+                Institutional Standards
+            </span>
+        </div>
 
-        <FeatureItem
-          icon="✓"
-          title="Verified care provider"
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <FeatureItem
+            icon={ShieldCheck}
+            title="Verified Provider"
+            description="Fully licensed and IDHS compliant care."
+          />
 
-        <FeatureItem
-          icon="🏥"
-          title="Over 3 years of experience"
-        />
+          <FeatureItem
+            icon={Award}
+            title="3+ Year Tenure"
+            description="Proven track record in CILA arrangements."
+          />
 
-        <FeatureItem
-          icon="⭐"
-          title= "High satisfaction rate"
-        />
+          <FeatureItem
+            icon={Star}
+            title="Top-Tier Care"
+            description="Consistently high family satisfaction rates."
+          />
 
-        <FeatureItem
-          icon="⏱️"
-          title="24/7 onsite supervision"
-        />
-
+          <FeatureItem
+            icon={Activity}
+            title="24/7 Oversight"
+            description="Continuous onsite clinical supervision."
+          />
+        </div>
       </div>
     </section>
   );
 };
 
 export default Features;
-
