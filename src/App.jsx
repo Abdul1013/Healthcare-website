@@ -11,6 +11,7 @@ import Footer from './Components/Footer.jsx'
 import FAQSection from './Components/FAQSection.jsx'
 import ContactUs from './Components/ContactUs.jsx'
 import ServicesPage from './Components/ServicesPage.jsx'
+import Reveal from './Components/Reveal.jsx'
 
 const getPageFromHash = () => (window.location.hash.startsWith('#/services') ? 'services' : 'home')
 
@@ -50,13 +51,33 @@ function App() {
         <>
           <Hero />
           {/* <Title firrstline="Our Services"/> */}
-          <Features />
-          <AboutUs />
-          <Services />
-          <Section />
-          <ContactUs />
+          <Reveal><Features /></Reveal>
+          <Reveal><AboutUs /></Reveal>
+          <Reveal><Services /></Reveal>
+          <Reveal variant="zoom"><Section /></Reveal>
+          <Reveal><ContactUs /></Reveal>
           {/* <TestimonialSection/> */}
-          <FAQSection />
+          <section className="w-full bg-white py-16">
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Reveal variant="left" className="md:col-span-2">
+                <img
+                  src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80&auto=format&fit=crop"
+                  alt="Compassionate healthcare professional"
+                  loading="lazy"
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-500"
+                />
+              </Reveal>
+              <Reveal variant="right" delay={150}>
+                <img
+                  src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80&auto=format&fit=crop"
+                  alt="Caring for the elderly at home"
+                  loading="lazy"
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-500"
+                />
+              </Reveal>
+            </div>
+          </section>
+          <Reveal><FAQSection /></Reveal>
         </>
       )}
       <Footer />
