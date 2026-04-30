@@ -1,6 +1,6 @@
 import { Home, Building2, ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
-
+  
 const ServiceItem = ({ icon, title, description }) => {
   const Icon = icon;
   return (
@@ -39,7 +39,12 @@ const StepItem = ({ step, title, description, onClick }) => {
 const defaultScrollToContact = () =>
   document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' });
 
-const Services = ({ onGetStarted }) => {
+const Services = ({ onGetStarted, onNavigate }) => {
+  const goGetStarted = () => {
+    if (typeof onNavigate === "function") {
+      onNavigate("home", "contact-us");
+    }
+  };
   const handleStart = onGetStarted || defaultScrollToContact;
   return (
     <section id="services" className="w-full py-24 bg-slate-100">
@@ -57,7 +62,14 @@ const Services = ({ onGetStarted }) => {
             <p className="text-slate-500 text-lg font-light leading-relaxed">
               We provide a spectrum of care ranging from intermittent home visits to 24/7 community integrated living arrangements, all centered around individual growth.
             </p>
+            <button
+                onClick={goGetStarted}
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-900 border-b-2 border-health-green pb-1 hover:gap-4 transition-all"
+              >
+                Get Started <ArrowRight size={16} />
+              </button>
           </div>
+           
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-100 border border-slate-100 overflow-hidden">

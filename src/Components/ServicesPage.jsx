@@ -230,8 +230,8 @@ const ServicesPage = ({ onNavigate }) => {
   return (
     <main className="bg-white">
       {/* Page Hero */}
-      <section className="relative overflow-hidden bg-slate-50 pt-36 pb-24 md:pt-44 md:pb-32 border-b border-slate-100">
-        <div className="absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-health-green/10 blur-3xl pointer-events-none" />
+      <section className="relative overflow-hidden bg-slate-50 pt-36 pb-24 md:pt-44 border-b border-slate-100">
+        <div className="absolute -top-24 -right-24 w-[28rem] h-[12rem] rounded-full bg-health-green/10 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-24 w-[24rem] h-[24rem] rounded-full bg-health-pink/10 blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative">
           <nav
@@ -248,35 +248,11 @@ const ServicesPage = ({ onNavigate }) => {
             <span className="text-slate-900">Services</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-            <div className="lg:col-span-8">
-              <Eyebrow>Our Services</Eyebrow>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 leading-[0.92]">
-                Care that fits <br />
-                <span className="italic font-serif font-light text-slate-500">
-                  every life stage.
-                </span>
-              </h1>
-            </div>
-            <div className="lg:col-span-4">
-              <p className="text-lg text-slate-600 font-light leading-relaxed">
-                From around-the-clock residential support to flexible in-home
-                assistance, SimplifyCare delivers professional, compassionate
-                care across Matteson and Illinois.
-              </p>
-              <button
-                onClick={goGetStarted}
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-900 border-b-2 border-health-green pb-1 hover:gap-4 transition-all"
-              >
-                Get Started <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Services overview (existing component) */}
-      <Services onGetStarted={goGetStarted} />
+      <Services onGetStarted={goGetStarted} onNavigate={goGetStarted} />
 
       {/* Quick Comparison */}
       <section

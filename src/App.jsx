@@ -53,7 +53,7 @@ function App() {
           {/* <Title firrstline="Our Services"/> */}
           <Reveal><Features /></Reveal>
           <Reveal><AboutUs /></Reveal>
-          <Reveal><Services /></Reveal>
+          <Reveal><Services onNavigate={navigate} /></Reveal>
           <Reveal variant="zoom"><Section /></Reveal>
           <Reveal><ContactUs /></Reveal>
           {/* <TestimonialSection/> */}
