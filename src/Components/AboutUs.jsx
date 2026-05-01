@@ -39,8 +39,8 @@ const AboutUs = () => {
           </div>
         </div>
 
-         <div className="flex flex-col md:flex-row gap-16 items-start mb-12">
-           {/*Image*/}
+        <div className="flex flex-col md:flex-row gap-16 items-start mb-12">
+          {/*Image*/}
           <div className="w-full md:w-1/2 animate-slide-up">
             <img
               src="/about2.jpg"
@@ -50,7 +50,6 @@ const AboutUs = () => {
           </div>
 
           <div className="w-full md:w-1/2 space-y-8">
-
             <div className="h-px w-20 bg-health-green" />
 
             <p className="text-lg text-slate-600 leading-relaxed font-light">
@@ -67,7 +66,6 @@ const AboutUs = () => {
               highest standard of care for our clients and their families.
             </p>
           </div>
-         
         </div>
 
         {/* MISSION*/}
@@ -78,12 +76,28 @@ const AboutUs = () => {
                 Our Mission
               </h3>
               <p className="text-slate-600 font-light leading-relaxed">
-                At SimplifyCare Inc. we are driven by a simple mission:{" "}
-                <b>to make care easier, more accessible and more human. </b> We
-                partner with families, providers and community organizations to
-                ensure every individual receives the respect, support and
-                opportunities they deserve. Together, we are building a future
-                where people of all abilities can live, grow and belong.
+                SimplifyCare Inc. provides compassionate, individualized care
+                that enhances the quality of life for people with developmental
+                disabilities, neurological conditions, and related challenges.
+                Through our CILA programs, we deliver 24-hour support, onsite
+                supervision, and person-centered services that encourage
+                independence, foster growth, and support individuals in
+                achieving their goals.
+              </p>
+              <p>
+                We are committed to honoring the uniqueness of every person we
+                serve by creating environments where residents can express
+                themselves, build lasting relationships, and participate fully
+                in community life. Our mission is rooted in empowerment,
+                dignity, and inclusion ensuring every individual has the tools
+                and support to lead an enriched, autonomous, and fulfilling
+                life.
+              </p>
+              <p>
+                By offering innovative, strength-based services and developing
+                tailored support systems, SimplifyCare Inc. bridges the gap
+                between current needs and long-term success, promoting
+                stability, opportunity, and holistic well-being.
               </p>
             </div>
             <div className="md:border-l-2 border-health-green md:px-2 ">
@@ -91,8 +105,16 @@ const AboutUs = () => {
                 Our Vision
               </h3>
               <p className="text-slate-600 font-light leading-relaxed md:text-center">
-                Empowering adults with disabilities through skill-coaching and
-                medication management to achieve full community participation.
+                At SimplifyCare Inc., our vision is to be a premier provider of
+                Community Integrated Living Arrangements (CILA) across
+                Illinois—creating inclusive, home like environments where
+                individuals with intellectual and developmental disabilities are
+                celebrated, supported, and empowered. We envision communities
+                where every individual thrives through autonomy, connection, and
+                the opportunity to live a meaningful life. By cultivating
+                respect, compassion, and person-centered care, we strive to
+                inspire personal achievement and lasting integration within
+                society.
               </p>
             </div>
           </div>

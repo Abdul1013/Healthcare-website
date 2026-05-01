@@ -15,6 +15,10 @@ import {
   MessageCircle,
   Activity,
   CheckCircle2,
+  UtensilsCrossed,
+  ClipboardList,
+  Footprints,
+  LifeBuoy,
 } from "lucide-react";
 import Services from "./Services.jsx";
 
@@ -112,6 +116,108 @@ const cilaDetails = [
     title: "Safety, Staffing & Compliance",
     description:
       "State-licensed and fully insured. Background-checked staff, ongoing training, documented care plans, and rigorous compliance with Illinois DHS standards.",
+  },
+];
+
+const homecareScope = [
+  {
+    icon: Activity,
+    title: "Activities of Daily Living",
+    description:
+      "Housekeeping, laundry, and a safe living environment — plus personal services like bathing, dressing, grooming, and hygiene techniques.",
+  },
+  {
+    icon: Footprints,
+    title: "Ambulation",
+    description:
+      "Transfers between bed and wheelchair, with assistance using walkers, wheelchairs, and canes.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Meal Preparation",
+    description:
+      "Meal preparation and preservation that follows prescribed dietary requirements and nutrition standards.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Documentation",
+    description:
+      "Patient journal entries, supervisor notifications for changing conditions, and medication compliance recording.",
+  },
+  {
+    icon: Car,
+    title: "Activities Outside the Home",
+    description:
+      "Medication pick-up, shopping, errands, and escort to appointments and social activities.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Companionship & Supervision",
+    description:
+      "Meaningful companionship through talking, watching, and engaging with the client throughout the day.",
+  },
+  {
+    icon: Pill,
+    title: "Routine Health Supervision",
+    description:
+      "Medication reminders and supervision of simple, recommended exercises to support overall wellbeing.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Respite Care",
+    description:
+      "Short-term relief home services that give family caregivers a chance to rest and recharge.",
+  },
+];
+
+const cilaScope = [
+  {
+    icon: Activity,
+    title: "Personal Care & Daily Living Support",
+    description:
+      "Bathing, grooming, dressing, hygiene, toileting, and continence care — plus housekeeping and training in independent living skills and adaptive equipment.",
+  },
+  {
+    icon: Footprints,
+    title: "Mobility & Transfer Assistance",
+    description:
+      "Safe transfer support (bed, wheelchair, walker, cane), mobility and positioning assistance, fall prevention, and safety monitoring.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Nutrition & Meal Services",
+    description:
+      "Meal planning and preparation around dietary needs, nutritional intake monitoring, food storage and safety, and feeding support when needed.",
+  },
+  {
+    icon: Pill,
+    title: "Health Monitoring & Medication Support",
+    description:
+      "Medication reminders and adherence tracking, observation and reporting of health changes, provider coordination, and supervised activities.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Documentation & Care Coordination",
+    description:
+      "Daily care logs, progress documentation, incident reporting, and communication with families, case managers, and supervisors.",
+  },
+  {
+    icon: Car,
+    title: "Community Integration & Social Support",
+    description:
+      "Transportation to appointments and activities, errands and shopping, encouragement of social connection, and community program participation.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Companionship & Behavioral Support",
+    description:
+      "Emotional support, engagement in meaningful activities, and behavioral monitoring with support plans where applicable.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Respite & Relief Services",
+    description:
+      "Short-term care for family or primary caregivers, flexible scheduling, and emergency or temporary care coverage.",
   },
 ];
 
@@ -248,6 +354,64 @@ const ServicesPage = ({ onNavigate }) => {
             <span className="text-slate-900">Services</span>
           </nav>
 
+        </div>
+      </section>
+
+      {/* Scope of Services — separated by program */}
+      <section id="scope" className="w-full py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 max-w-3xl">
+            <SectionHeading
+              eyebrow="Scope of Services"
+              line1="What we deliver,"
+              line2="program by program."
+              kicker="A clear breakdown of the support included in each of our two services. Use it to compare what each program covers and find the right fit."
+            />
+          </div>
+
+          {/* Homecare Scope */}
+          <div className="mb-24">
+            <div className="flex items-center gap-3 mb-10 pb-6 border-b border-slate-200">
+              <div className="w-10 h-10 rounded-xl bg-health-green/10 text-health-green flex items-center justify-center">
+                <Home size={20} strokeWidth={1.75} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-health-green">
+                  Program One
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                  Homecare Service
+                </h3>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {homecareScope.map((item) => (
+                <DetailCard key={item.title} {...item} />
+              ))}
+            </div>
+          </div>
+
+          {/* CILA Scope */}
+          <div>
+            <div className="flex items-center gap-3 mb-10 pb-6 border-b border-slate-200">
+              <div className="w-10 h-10 rounded-xl bg-slate-900/10 text-slate-900 flex items-center justify-center">
+                <Building2 size={20} strokeWidth={1.75} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-900">
+                  Program Two
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                  CILA Program
+                </h3>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {cilaScope.map((item) => (
+                <DetailCard key={item.title} {...item} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
